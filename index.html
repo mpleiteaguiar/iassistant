@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        </style>
+        <head>
+            <title>
+                IAssistant For Your Life Work
+            </title>
+            <script type="module" src="./pdf.mjs"></script>
+        </head>
+    </head>
+    <body>
+        <script type="text/javascript" src="scripts/ia.js">
+            iaLoadConfigurations();
+        </script>
+        <div id="content_main" class="main_container">
+            <div id="toolbar_communication">
+                <img id="chat" src="images/chat.png">
+                <img id="notification" src="images/notification.png">
+            </div>
+            <img id="logotipo" src="images/logon.png">
+            <div id="site">
+                <label id="label_site" for="input_site">
+                    Site:
+                </label>
+                <input id="input_site" type="text">
+            </div>
+            <div id="search">
+                <label id="label_search" for="textarea_search">Search:</label>
+                <textarea id="textarea_search"></textarea>
+            </div>
+            <div id="msg_state"></div>
+            <div id="options">
+                <input class="input_options" id="show_page" type="checkbox" title="Show Page" name="options" checked>
+                <label class="input_options" for="show_page">Show Page</label>
+                <input class="input_options" id="show_graphics" type="checkbox" title="Show Graphics" name="options">
+                <label class="input_options" for="show_graphics">Show Graphics</label>
+                <input class="input_options" id="show_metrics" type="checkbox" title="Show Metrics Analytics" name="options">
+                <label class="input_options" for="show_metrics">Show Metrics</label>
+                <input class="input_options" id="show_configurations" type="checkbox" title="Show Configurations" name="options">
+                <label class="input_options" for="show_configurations">Show Configurations</label>
+            </div>
+            <div class="" id="container_results">
+                <div id="container_page" class="container-visible" id="container_page">
+
+                </div>                
+                <div id="container_graphics" class="container-hidden" id="container_graphics">
+                    <iframe id="graphs_view" width="1024" height="500">
+                             
+                    </iframe>
+                </div>                
+                <div id="container_metrics" class="container-hidden" id="container_metrics">
+                    <iframe id="metrics_view" width="1280" height="1980">
+
+                    </iframe>
+                </div>        
+                <div id="container_configurations" class="container-hidden" id="container_metrics">
+                    <div id="configurations_view">
+                        <div id="config_server_row">
+                            <label class="labels_input" for="server_address">BackEnd Server:</label>
+                            <input class="input_fields" id="server_address" type="text" title="Server address that support backend application">
+                            <label class="labels_input" for="list_options_ia">IA Generative - Options Response Number:</label>
+                            <input class="short_field" id="list_options_ia" type="number" title="Number of optimized options that will have returned by server">
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </body>
+</html>

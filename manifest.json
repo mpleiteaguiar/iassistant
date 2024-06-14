@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "IAssistant",
+    "description": "Your IAssistant Forever Ever",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "sidePanel",
+      "storage",
+      "unlimitedStorage"
+    ],
+    "side_panel": {
+      "default_path": "index.html"
+    },
+    "background": {
+      "service_worker": "scripts/iaServiceWorker.js",
+      "type": "module"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "images/icon-128.png"
+    },
+    "icons": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+B",
+          "mac": "Command+B"
+        }
+      }
+    },
+  "minimum_chrome_version": "120",
+  "omnibox": {
+    "keyword": "assistente"
+    }
+  }
